@@ -2,17 +2,17 @@ name: Build and Deploy to GitHub Pages
 
 on:
   push:
-    branches: [main]
+    branches: [master]
 
 permissions:
-  contents: write  # Required for peaceiris/actions-gh-pages to push to gh-pages
+  contents: write
 
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout code
         uses: actions/checkout@v3
 
       - name: Setup Node.js
